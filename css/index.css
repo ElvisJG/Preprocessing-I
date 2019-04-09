@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -133,4 +133,91 @@ table {
 html,
 body {
   height: 100%;
+  background-color: #F0F0F0;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 30px 0;
+  justify-content: flex-end;
+}
+nav a {
+  color: #ed786a;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+h1 {
+  font-size: 3rem;
+  color: #ed786a;
+}
+.introbox {
+  background-color: #DCDCDC;
+  padding: 2rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+.introbox img {
+  margin: 0.5rem 0;
+}
+.introbox hr {
+  margin: 1.5rem 0;
+}
+.introbox button {
+  margin: 1.5rem 0;
+  font-size: 1.15rem;
+  color: #ed786a;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.middle-content {
+  display: flex;
+  align-content: flex-start;
+  margin: 1rem 0;
+}
+.middle-content .contentbox {
+  margin: 0 auto;
+}
+.middle-content .contentbox h1 {
+  font-size: 2.5rem;
+}
+.middle-content .contentbox h2 {
+  margin: 0 auto;
+  font-size: 2rem;
+}
+.middle-content .contentbox li {
+  border: 1px solid black;
+  width: 20rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.table {
+  padding: 2rem 0;
+}
+.table h1 {
+  font-size: 2.5rem;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  width: 900px;
+  text-align: center;
+  background: #DCDCDC;
+  font-size: 1.2rem;
+  padding: 1.5rem;
 }
