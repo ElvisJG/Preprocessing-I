@@ -85,12 +85,12 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -105,104 +105,111 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: "";
-    content: none;
+  content: "";
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-	height: 100%;
-	background-color: @spacegray;
-	color: @vlgray;
+  height: 100%;
+  background-color: @spacegray;
+  color: @vlgray;
 }
 
 .full {
-	max-width: 900px;
-	margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 
-	@media @pixel2, @iPad {
-		width: 100%;
-	}
+  @media @pixel2, @iPad {
+    width: 100%;
+  }
 }
 
 .container {
-    width: 100%;
-	margin: 0 auto;
-	font-size: 1.15rem;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.15rem;
 
-	@media @pixel2, @iPad {
-		font-size: 2.5rem;
-		width: 90%;
-	}
+  @media @pixel2, @iPad {
+    font-size: 2.5rem;
+    width: 90%;
+  }
 }
 
 h1 {
-	font-size: 3rem;
-	color: @orangey;
+  font-size: 3rem;
+  color: @orangey;
+  font-family: "Montserrat", sans-serif;
+  font-weight: black;
 
-	@media @pixel2, @iPad {
-		font-size: 6rem;
-	}
+  @media @pixel2, @iPad {
+    font-size: 6rem;
+    font-weight: 1000;
+  }
 }
 
 h2 {
-	font-size: 1.5rem;
-	margin: 1rem 0;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-family: "Montserrat", sans-serif;
 }
 
+p {
+  font-family: "Roboto", sans-serif;
+}
 
 //Mixins
 .flex() {
-	display: flex;
-	justify-content: center;
-	align-content: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .flexPortable() {
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	align-content: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
 }
 
 // Color Theme
-@orangey: #D48872;
+@orangey: #d48872;
 @rasberry: #c51f5d;
 @spacegray: #142634;
-@grayish: #7E8889;
-@vlgray: #BDC7C1;
-@bc: #5A666B;
+@grayish: #7e8889;
+@vlgray: #bdc7c1;
+@bc: #5a666b;
 
 // Media
 
@@ -213,173 +220,180 @@ h2 {
 @pad: 2rem 0;
 
 nav {
-    .flex();
-    margin: 30px 0;
-	justify-content: flex-end;
-	width: 100%;
-	
-	@media @pixel2, @iPad {
-		justify-content: center;
-		width: 100%;
-	}
+  .flex();
+  margin: 30px 0;
+  justify-content: flex-end;
+  width: 100%;
 
-    a {
-        color: @orangey;
-        margin-left: 20px;
-        font-size: 1.4rem;
-		text-decoration: none;
-		
-		@media @pixel2, @iPad {
-			font-size: 1.5rem;
-			margin: 0 auto;
-		}
-	}
+  @media @pixel2, @iPad {
+    justify-content: center;
+    width: 100%;
+  }
+
+  a {
+    color: @orangey;
+    margin-left: 20px;
+    font-size: 1.4rem;
+    text-decoration: none;
+
+    @media @pixel2, @iPad {
+      font-size: 1.5rem;
+      margin: 0 auto;
+    }
+  }
 }
 
 .introbox {
-    background-color: @grayish;
-    padding: 2rem;
-	border-radius: 6px;
-	margin-bottom: 2rem;
+  background-color: @grayish;
+  padding: 2rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
 
-	@media @pixel2, @iPad {
-		.flexPortable();
-		width: 100%;
-		padding: 0 auto;
-		margin: 0 auto;
-	}
+  @media @pixel2, @iPad {
+    .flexPortable();
+    width: 100%;
+    padding: 0 auto;
+    margin: 0 auto;
+  }
 
-	h1, h2 {
-		@media @pixel2, @iPad {
-			text-align: center;
-			font-size: 2.5rem;
-		}
-	}
-
-	p {
-		@media @pixel2, @iPad {
-			text-align: center;
-			font-size: 1.5rem;
-		}
-	}
-
-    img {
-		margin: 0.5rem 0;
-		
-		@media @pixel2, @iPad {
-			width: 100%;
-			align-self: center;
-		}
+  h1,
+  h2 {
+    @media @pixel2, @iPad {
+      text-align: center;
+      font-size: 2.5rem;
     }
+  }
 
-    hr {
-        margin: 1.5rem 0;
+  p {
+    @media @pixel2, @iPad {
+      text-align: center;
+      font-size: 1.5rem;
     }
+  }
 
-    button {
-        margin: 1.5rem 0;
-        font-size: 1.15rem;
-        color: @rasberry;
-        background: @vlgray;
-        border-radius: 8px;
-		padding: 1rem;
-		
-		@media @pixel2, @iPad {
-			font-size: 2rem;
-			width: 100%;
-		}
+  img {
+    margin: 0.5rem 0;
+
+    @media @pixel2, @iPad {
+      width: 100%;
+      align-self: center;
     }
+  }
+
+  hr {
+    margin: 1.5rem 0;
+  }
+
+  button {
+    margin: 1.5rem 0;
+    font-size: 1.15rem;
+    color: @rasberry;
+    background: @vlgray;
+    border-radius: 8px;
+    padding: 1rem;
+
+    @media @pixel2, @iPad {
+      font-size: 2rem;
+	  width: 100%;
+	  margin: 1rem auto;
+    }
+  }
 }
 
 .middle-content {
-	display: flex;
-	align-content: flex-start;
-	margin: 1rem 0;
+  display: flex;
+  align-content: flex-start;
+  margin: 1rem 0;
 
-	@media @pixel2, @iPad {
-		.flexPortable();
-		text-align: center;
-	}
+  @media @pixel2, @iPad {
+    .flexPortable();
+    text-align: center;
+  }
 
-	.contentbox {
-		margin: 0rem 1rem 0rem;
-		
-		h1 {
-			font-size: 2.5rem;
-			color: @rasberry
-		}
+  .contentbox {
+    margin: 0rem 1rem 0rem;
 
-		p {
-			font-size: 1.5rem;
-		}
+    h1 {
+      font-size: 2.5rem;
+      color: @rasberry;
 
-		h2 {
-			margin: 0 auto;
-			font-size: 2rem;
-			color: @rasberry;
+      @media @pixel2, @iPad {
+        padding-bottom: 1rem;
+      }
+    }
 
-			@media @pixel2, @iPad {
-				margin-top: 2rem;
-				padding-bottom: 1rem;
-			}
-		}
+    p {
+      font-size: 1.5rem;
+    }
 
-		ul {
-			width: 100%
-		}
+    h2 {
+      margin: 0 auto;
+      font-size: 2rem;
+      color: @rasberry;
 
-		li {
-			border: 1px solid @bc;
-			width: 100%;
-			font-size: 1.5rem;
-			padding: 1rem;
-		}
-	}
+      @media @pixel2, @iPad {
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    ul {
+      width: 100%;
+    }
+
+    li {
+      border: 1px solid @bc;
+      width: 100%;
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }
 }
 
 .table {
-	padding: @pad;
+  padding: @pad;
 
-	@media @pixel2, @iPad {
-		.flexPortable();
-		font-size: 1.5rem;
-	}
+  @media @pixel2, @iPad {
+    .flexPortable();
+    font-size: 1.5rem;
+  }
 
-	h1 {
-		font-size: 2.5rem;
-		color: @rasberry;
-		padding: @pad;
-	}
+  h1 {
+    font-size: 2.5rem;
+    color: @rasberry;
+    padding: @pad;
+  }
+}
 
-	table {
-		padding: @pad;
+table {
+  padding: @pad;
 
-		@media @pixel2, @iPad {
-			width: 100%;
-			margin: 0 auto;
-			padding: 0;
-		}
-	}
-	
-	th {
-		padding: 0.7rem;
+  @media @pixel2, @iPad {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
 
-		@media @pixel2, @iPad {
-			padding: 0.5rem 0;
-		}
-	}
+  th {
+    padding: 0.7rem;
+
+    @media @pixel2, @iPad {
+      padding: 0.5rem 0;
+      margin: 0 auto;
+    }
+  }
 }
 
 .btm {
-	clear: both;
-	position: relative;
-	bottom: 0;
-	margin: 0 auto;
-	width: 100%;
-	text-align: center;
-	background: @bc;
-	font-size: 1.2rem;
-	padding: 1.5rem;
-	color: @orangey;
-	margin: 2rem 0rem 0rem 0rem;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  background: @bc;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  color: @orangey;
+  margin: 2rem 0rem 0rem 0rem;
 }
