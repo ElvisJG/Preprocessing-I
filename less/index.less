@@ -143,14 +143,44 @@ table {
 html,
 body {
 	height: 100%;
-	background-color: #F0F0F0;
+	background-color: @spacegray;
+	color: @vlgray;
+}
+
+.full {
+	max-width: 900px;
+	margin: 0 auto;
+
+	@media @pixel2, @iPad {
+		width: 100%;
+	}
 }
 
 .container {
-    max-width: 900px;
+    width: 100%;
 	margin: 0 auto;
 	font-size: 1.15rem;
+
+	@media @pixel2, @iPad {
+		font-size: 2.5rem;
+		width: 90%;
+	}
 }
+
+h1 {
+	font-size: 3rem;
+	color: @orangey;
+
+	@media @pixel2, @iPad {
+		font-size: 6rem;
+	}
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin: 1rem 0;
+}
+
 
 //Mixins
 .flex() {
@@ -159,33 +189,51 @@ body {
 	align-content: center;
 }
 
-// Vars
-@orangey: #ed786a;
-@grayish: #DCDCDC;
+.flexPortable() {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+// Color Theme
+@orangey: #D48872;
+@rasberry: #c51f5d;
+@spacegray: #142634;
+@grayish: #7E8889;
+@vlgray: #BDC7C1;
+@bc: #5A666B;
+
+// Media
+
+@pixel2: ~"(max-width: 500px)";
+@iPad: ~"(max-width: 800px)";
+
+// Padding and Margins
 @pad: 2rem 0;
 
 nav {
     .flex();
     margin: 30px 0;
-    justify-content: flex-end;
+	justify-content: flex-end;
+	width: 100%;
+	
+	@media @pixel2, @iPad {
+		justify-content: center;
+		width: 100%;
+	}
 
     a {
         color: @orangey;
         margin-left: 20px;
         font-size: 1.4rem;
-        text-decoration: none;
-    }
-
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin: 1rem 0;
-}
-
-h1 {
-	font-size: 3rem;
-	color: @orangey;
+		text-decoration: none;
+		
+		@media @pixel2, @iPad {
+			font-size: 1.5rem;
+			margin: 0 auto;
+		}
+	}
 }
 
 .introbox {
@@ -194,8 +242,34 @@ h1 {
 	border-radius: 6px;
 	margin-bottom: 2rem;
 
+	@media @pixel2, @iPad {
+		.flexPortable();
+		width: 100%;
+		padding: 0 auto;
+		margin: 0 auto;
+	}
+
+	h1, h2 {
+		@media @pixel2, @iPad {
+			text-align: center;
+			font-size: 2.5rem;
+		}
+	}
+
+	p {
+		@media @pixel2, @iPad {
+			text-align: center;
+			font-size: 1.5rem;
+		}
+	}
+
     img {
-        margin: 0.5rem 0;
+		margin: 0.5rem 0;
+		
+		@media @pixel2, @iPad {
+			width: 100%;
+			align-self: center;
+		}
     }
 
     hr {
@@ -205,10 +279,15 @@ h1 {
     button {
         margin: 1.5rem 0;
         font-size: 1.15rem;
-        color: @orangey;
-        background: white;
+        color: @rasberry;
+        background: @vlgray;
         border-radius: 8px;
-        padding: 1rem;
+		padding: 1rem;
+		
+		@media @pixel2, @iPad {
+			font-size: 2rem;
+			width: 100%;
+		}
     }
 }
 
@@ -217,20 +296,41 @@ h1 {
 	align-content: flex-start;
 	margin: 1rem 0;
 
+	@media @pixel2, @iPad {
+		.flexPortable();
+		text-align: center;
+	}
+
 	.contentbox {
-		margin: 0 auto;
+		margin: 0rem 1rem 0rem;
 		
 		h1 {
 			font-size: 2.5rem;
+			color: @rasberry
 		}
+
+		p {
+			font-size: 1.5rem;
+		}
+
 		h2 {
 			margin: 0 auto;
 			font-size: 2rem;
+			color: @rasberry;
+
+			@media @pixel2, @iPad {
+				margin-top: 2rem;
+				padding-bottom: 1rem;
+			}
+		}
+
+		ul {
+			width: 100%
 		}
 
 		li {
-			border: 1px solid black;
-			width: 20rem;
+			border: 1px solid @bc;
+			width: 100%;
 			font-size: 1.5rem;
 			padding: 1rem;
 		}
@@ -240,19 +340,46 @@ h1 {
 .table {
 	padding: @pad;
 
+	@media @pixel2, @iPad {
+		.flexPortable();
+		font-size: 1.5rem;
+	}
+
 	h1 {
 		font-size: 2.5rem;
+		color: @rasberry;
+		padding: @pad;
+	}
+
+	table {
+		padding: @pad;
+
+		@media @pixel2, @iPad {
+			width: 100%;
+			margin: 0 auto;
+			padding: 0;
+		}
+	}
+	
+	th {
+		padding: 0.7rem;
+
+		@media @pixel2, @iPad {
+			padding: 0.5rem 0;
+		}
 	}
 }
 
-footer {
-	.flex();
-	position: absolute;
+.btm {
+	clear: both;
+	position: relative;
 	bottom: 0;
 	margin: 0 auto;
-	width: 900px;
+	width: 100%;
 	text-align: center;
-	background: @grayish;
+	background: @bc;
 	font-size: 1.2rem;
 	padding: 1.5rem;
+	color: @orangey;
+	margin: 2rem 0rem 0rem 0rem;
 }
