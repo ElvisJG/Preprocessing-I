@@ -158,7 +158,7 @@ body {
 }
 h1 {
   font-size: 3rem;
-  color: #d48872;
+  color: #c51f5d;
   font-family: "Montserrat", sans-serif;
   font-weight: black;
 }
@@ -191,7 +191,7 @@ nav {
   }
 }
 nav a {
-  color: #d48872;
+  color: #c51f5d;
   margin-left: 20px;
   font-size: 1.4rem;
   text-decoration: none;
@@ -275,10 +275,17 @@ nav a {
 }
 .middle-content .contentbox {
   margin: 0rem 1rem 0rem;
+  width: 50%;
+}
+@media (max-width: 500px), (max-width: 800px) {
+  .middle-content .contentbox {
+    width: 100%;
+  }
 }
 .middle-content .contentbox h1 {
   font-size: 2.5rem;
   color: #c51f5d;
+  padding-bottom: 1.5rem;
 }
 @media (max-width: 500px), (max-width: 800px) {
   .middle-content .contentbox h1 {
@@ -292,6 +299,8 @@ nav a {
   margin: 0 auto;
   font-size: 2rem;
   color: #c51f5d;
+  padding-bottom: 1.5rem;
+  text-align: center;
 }
 @media (max-width: 500px), (max-width: 800px) {
   .middle-content .contentbox h2 {
@@ -354,6 +363,6 @@ table th {
   background: #5a666b;
   font-size: 1.2rem;
   padding: 1.5rem;
-  color: #d48872;
+  color: #bdc7c1;
   margin: 2rem 0rem 0rem 0rem;
 }
